@@ -10,7 +10,7 @@ class Solution {
             }
             else
             {   
-                curr=curr>max?curr:max;
+                curr=Math.max(max,curr);
                 max=0;
             }
         }
