@@ -9,14 +9,6 @@
  * }
  */
 class Solution {
-    public static int size(ListNode head)
-    {   int size=1;
-        while(head!=null)
-        {
-            head=head.next;
-        }
-        return size;
-    }
     public ListNode rotateRight(ListNode head, int k) {
         if(head==null||head.next==null||k==0)
         {
