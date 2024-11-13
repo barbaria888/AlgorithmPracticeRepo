@@ -1,16 +1,5 @@
 class Solution {
-    public static int find(int []nums,int key)
-    {
-        for(int i=0;i<nums[i];i++)
-        {
-            if(nums[i]==key)
-            {
-                return i;
-            }
-        }
-        return nums.length-1;
-
-    }
+    
     public int trap(int[] height) {
         int ans=0;
         Stack <Integer>st=new Stack<>();
