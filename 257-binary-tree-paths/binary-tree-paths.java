@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    public static void helper(List<String> ans, String s,TreeNode root)
+    public static void helper(List ans,String s,TreeNode root )
     {
         if(root==null)
         {
@@ -23,14 +23,20 @@ class Solution {
         if(root.right==null&&root.left==null)
         {
             s+=root.val;
-            ans.add(s);
-            return;
+            ans.add(s); 
+            return;       
         }
-         helper(ans,s+root.val+"->",root.left);
-         helper(ans,s+root.val+"->",root.right);
+        helper(ans,s+root.val+"->",root.left);
+        helper(ans,s+root.val+"->",root.right);
+
     }
+
     public List<String> binaryTreePaths(TreeNode root) {
-        List<String> ans= new ArrayList<>();
+        if(root==null)
+        {
+            return new ArrayList<String>();
+        }
+        List <String> ans=new ArrayList<>();
         helper(ans,"",root);
         return ans;
     }
