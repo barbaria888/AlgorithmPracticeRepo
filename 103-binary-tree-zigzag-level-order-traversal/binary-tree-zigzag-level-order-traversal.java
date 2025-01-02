@@ -47,7 +47,6 @@ class Solution {
                     q.add(temp.right);
                 }
             }
-
             res.add(currAns);
             flag= !flag;
         }
