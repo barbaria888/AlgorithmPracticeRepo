@@ -6,7 +6,7 @@ class Solution {
         int ans=nums.length;
         while(start<=end)
         {
-            int mid= start + (end-start)/2;
+            int mid= (end+start)>>1;
             
             if(nums[mid]>=target)
             {
@@ -16,7 +16,6 @@ class Solution {
             else
             {
                 start= mid+1;
-                
             }
         }
         return ans;
