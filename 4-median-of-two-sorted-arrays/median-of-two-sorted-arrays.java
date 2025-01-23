@@ -21,11 +21,11 @@ class Solution {
         {
             ans[k++]=nums2[j++];
         }
-        if(ans.length%2==0)
+        if(k%2==0)
         {
-            return ((ans[ans.length/2])+ans[(ans.length/2)-1])/2.0;
+            return ((ans[k/2])+ans[(k/2)-1])/2.0;
         }
-        return ans[ans.length/2];
+        return ans[k/2];
 
 
     }
