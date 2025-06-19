@@ -1,4 +1,5 @@
 class Solution {
+    public static int count=0;
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> ans = new ArrayList<>();
         char[][] board = new char[n][n];
@@ -26,11 +27,13 @@ class Solution {
 
     private void solve(int row, char[][] board, List<List<String>> ans, int n) {
         if (row == n) {
+            
             List<String> res = new ArrayList<>();
             for (char[] r : board) {
                 res.add(new String(r));
             }
             ans.add(res);
+            count++;
             return;
         }
 
